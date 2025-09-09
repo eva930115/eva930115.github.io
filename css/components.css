@@ -1,0 +1,35 @@
+.test-container {
+  background-color: lightsalmon;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  gap : 5px;
+} 
+
+.item {
+  padding: 5px;
+  display: flex;    
+  justify-content: center;  /* (必要flex)item內文字 水平置中 */
+  align-content: space-between;      /* (必要flex)item內文字 垂直置中 */
+  border: 1px solid #000;
+}
+
+.item1 { 
+  justify-self: center;    /* (不用flex)item1本身 水平置中 */
+  align-self: stretch;     /* (不用flex)item1本身 垂直撐滿 */
+  background-color: lightblue; 
+}
+.item2 {
+  justify-self: center;    /* (不用flex)item1本身 水平置中 */
+  align-self: centr;     /* (不用flex)item1本身 垂直撐滿 */
+  background-color: lightgreen; 
+}
+.item3 { 
+  background-color: lightpink; 
+} 
+.item4 { 
+  background-color: lightgray; 
+}
+.item5 {
+  background-color: lightyellow; 
+}

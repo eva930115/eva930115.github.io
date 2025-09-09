@@ -1,0 +1,4 @@
+* { margin:0; padding:0; box-sizing: border-box; }  
+
+.font-inter { font-family: var(--font-sans); }
+.font-vollkorn { font-family: var(--font-serif); }
