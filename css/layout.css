@@ -20,9 +20,42 @@
 .container {
     width: min(calc(100% - 2rem), var(--container));
     /* width: min(100%-2rem, var(--container)); */
+    margin-inline: auto;  /* 置中 */
     padding: var(--space-3);
+}
+
+.navbar__inner {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+}
+
+.intro {
+    width: 100%;
+    background-color: #fff;
+}
+
+.intro__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+    align-items: center;
+}
+
+.intro__left {
+    display: flex;
+    text-align: center;
+    justify-self: end;  /*圖片靠右*/
+}   
+
+.intro__right {
+    padding: var(--space-4);
+}  
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    gap: var(--space-3);
     align-items: center;
 }
