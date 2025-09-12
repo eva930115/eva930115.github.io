@@ -16,19 +16,37 @@
     gap: var(--space-4);
 }
 
-
-.container {
-    width: min(calc(100% - 2rem), var(--container));
-    /* width: min(100%-2rem, var(--container)); */
-    margin-inline: auto;  /* 置中 */
-    padding: var(--space-3);
-}
-
 .navbar__inner {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.container {
+    width: min(calc(100% - 2rem), var(--container));
+    margin-inline: auto;  /* 置中 */
+    padding: var(--space-3);
+    overflow: auto;
+}
+
+body {
+    min-height: 100vh;   /* 至少跟視窗一樣高 */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+    flex: 1;  /*主內容撐開中間*/
+/* grow=1：可擴張
+   shrink=1：可壓縮
+   basis=0%：計算剩餘空間時，先把它當成 0 起算 */
+
 }
 
 .intro {
@@ -55,7 +73,50 @@
 
 .footer__grid {
     display: grid;
+    /* height: 10rem; */
     grid-template-columns: 1fr 1fr 1fr 2fr;
+    grid-template-rows: 2px 5rem;
     gap: var(--space-3);
     align-items: center;
+}
+
+.button__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-top: var(--space-4);
+}
+
+@media (max-width: 768px) {
+    .button__list {
+        flex-direction: column;
+        gap: var(--space-2);
+    }
+    .navbar__inner {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+    .intro__grid {
+        grid-template-columns: 1fr;  /*手機版一欄*/
+        text-align: center;
+    }
+
+    .intro__left {
+        justify-self: center;  /*圖片置中*/
+    }   
+
+    .intro__right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .footer__grid {
+        grid-template-columns: 1fr 1fr;  /*手機版兩欄*/
+        text-align: center;
+    }
+    
 }

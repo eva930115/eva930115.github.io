@@ -15,8 +15,8 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <header class="site-header" style="background-color: lightgreen;">
-        <div class="container navbar__inner" style="border: 2px solid black;">
+    <header class="site-header" >
+        <div class="container navbar__inner">
             <div class="brand">
                 <img class="brand__logo" src="./assets/images/bear.png">
                 <span class="brand__name">Eva</span>
@@ -33,39 +33,42 @@
 
     <main>
         <!-- Intro -->
-        <section id="intro" class="" style="background-color: lightyellow;">
-           <div class="container" style="border: 1px solid black;">
+        <section class="intro" >
+           <div class="container">
                 <div class="intro__grid">
-                    <div class="intro__left" style="background-color: rgb(134, 22, 137);">
+                    <div class="intro__left" >
                         <img class="intro__picture" src="./assets/images/my.jpg" alt="個人照片">
                     </div>
 
-                    <div class="intro__right intro__font" style="background-color: rgb(251, 215, 162);">
-                        <p class="intro__title">Hellow！</p>
+                    <div class="intro__right intro__font" >
+                        <p class="intro__title" >Hellow！</p>
                         <p class="intro__subtitle">自我介紹</p>
                         <p class="intro__description">我是呂念庭Eva，不會打Code 程式好難，是個宅宅，可以為了漫畫熬夜三天三夜，學程式無法堅持超過3天 ^u^/</p>
                         <div class="button__list">
-                            <span>Resume</span>
-                            <span>Projects</span>
-                            <span>Contact</span>
+                            <a href="/resume.html" class="btn_circle btn_resume">Resume</a>
+                            <a href="/project.html" class="btn_circle btn_project">Project</a>
+                            <a href="/contact.html" class="btn_circle btn_contact">Contact</a>
                         </div>
                     </div>
                 </div>
            </div>
         </section>
     </main>
-    <footer class="footer" style="background-color: lightpink;">
-        <div class="container footer__grid information" style="border: 1px solid black;">
-            <div  class="information-phone">
-                <p>Phone</p>
+    <footer class="footer" >
+        
+        <div class="container footer__grid information">
+            <img class="information-bar" src="./assets/images/line2.png" alt="bar" >
+            
+            <div  class="information-phone"  >
+                <p class="info_title">Phone</p>
                 <p>12345678</p>
             </div>
             <div class="information-email">
-                <p>Email</p>
+                <p class="info_title">Email</p>
                 <p>123@gmail.com</p>
             </div>
             <div class="information-follow">
-                <p>Follow me</p>
+                <p class="info_title">Follow me</p>
                 <a herf="https://www.facebook.com/">fb</a>
                 <a herf="https://www.instagram.com/">ig</a>
             </div>
