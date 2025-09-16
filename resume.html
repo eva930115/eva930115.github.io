@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--字體引入-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <meta charset="UTF-8">  <!--這個網頁的編碼-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--這個網頁要怎麼在行動裝置顯示-->
+    <meta name="description" content="A simple web page example"> <!--這個網頁的描述，google底下的灰字內容-->
+    <link rel="shortcut icon" href="assets/icons/favicon.png" type="image/x-icon">
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="css/resume.css">     
+    <link rel="stylesheet" href="css/layout.css">   
+    <link rel="stylesheet" href="css/tokens.css">   
+    <link rel="stylesheet" href="css/components.css">   
+    <script src="/js/main.js" defer></script>
+</head>
+<body>
+    <header class="site-header" >
+        <div class="container navbar__inner">
+            <a href="index.html" class="btn__home">
+                <div class="brand">
+                <img class="brand__logo" src="./assets/images/bear.png">
+                <span class="brand__name">Eva</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a class="nav-link" href="/resume.html" aria-current="page">Resume</a>
+                <img src="./assets/images/line.png" alt="分隔線">
+                <a class="nav-link" href="/project.html">Project</a>
+                <img src="./assets/images/line.png" alt="分隔線">
+                <a class="nav-link" href="/contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="resume container">
+        <h1 class="resume__title" >Resume</h1>
+        <!-- Work Experience -->
+        <section class="work-experience">
+            <div class="inner__grid">
+                <p class="section__title reveal">Work<br />Experience</p>
+                <div class="items__grid reveal" >
+                    <p class="section-subtitle" >2025/9 - Present</p>
+                    <div class="item">
+                        <p class="item-title">Editor</p>
+                        <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="education">
+            <div class="inner__grid">
+                <p class="section__title reveal">Education</p>
+                <div class="items__grid reveal" >
+                    <p class="section-subtitle">2025/9 - Present</p>
+                    <div class="item" >
+                        <p class="item-title">Establishment Name | Master’s Degree</p>
+                        <p class="item-description">I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.</p>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="skills-and-expertise">
+            <div class="skill__grid item">
+                <p class="section__title reveal">Skills<br />& Expertise</p>
+               <div class="skill__description item-description reveal">
+                    <ul>
+                        <li>I'm a paragraph. Click here to add your own text and edit me.</li>
+                        <li>I'm a paragraph. Click here to add your own text and edit me.</li>
+                        <li>I'm a paragraph. Click here to add your own text and edit me.</li>
+                        <li>I'm a paragraph. Click here to add your own text and edit me.</li>
+                    </ul>
+               </div>
+            </div>
+        </section>
+        
+
+    </main>
+
+
+    <footer class="footer" >
+        
+        <div class="container footer__grid information">
+            <img class="information-bar" src="./assets/images/line2.png" alt="bar" >
+            
+            <div  class="information-phone"  >
+                <p class="info_title">Phone</p>
+                <p>12345678</p>
+            </div>
+            <div class="information-email">
+                <p class="info_title">Email</p>
+                <p>123@gmail.com</p>
+            </div>
+            <div class="information-follow">
+                <p class="info_title">Follow me</p>
+                <a herf="https://www.facebook.com/">fb</a>
+                <a herf="https://www.instagram.com/">ig</a>
+            </div>
+            <div class="information-cc">
+                <p>&copy; 2024 My Web Page</p>
+            </div>  
+        </div> 
+    </footer>
+</body>
+</html>

@@ -1,3 +1,10 @@
+/* base */
+* { margin:0; padding:0; box-sizing: border-box; }  
+
+.font-inter { font-family: var(--font-sans); }
+.font-vollkorn { font-family: var(--font-serif); }
+/*  */
+
 .site-header {
     width: 100%;
     margin-inline: auto;  /* 置中 */
@@ -27,7 +34,7 @@
     width: min(calc(100% - 2rem), var(--container));
     margin-inline: auto;  /* 置中 */
     padding: var(--space-3);
-    overflow: auto;
+    overflow: hidden;
 }
 
 body {
@@ -64,7 +71,7 @@ main {
 .intro__left {
     display: flex;
     text-align: center;
-    overflow: hidden;
+    /* overflow: hidden; */
     justify-self: end;  /*圖片靠右*/
 }   
 
