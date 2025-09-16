@@ -11,7 +11,7 @@
     <meta name="description" content="A simple web page example"> <!--這個網頁的描述，google底下的灰字內容-->
     <link rel="shortcut icon" href="assets/icons/favicon.png" type="image/x-icon">
     <title>My Web Page</title>
-    <link rel="stylesheet" href="css/home.css">     
+    <link rel="stylesheet" href="css/projects.css">     
     <link rel="stylesheet" href="css/layout.css">   
     <link rel="stylesheet" href="css/tokens.css">   
     <link rel="stylesheet" href="css/components.css">   
@@ -36,29 +36,34 @@
         </div>
     </header>
 
-    <main>
-        <!-- Intro -->
-        <section class="intro" >
-           <div class="container">
-                <div class="intro__grid">
-                    <div class="intro__left" >
-                        <img class="intro__picture reveal" src="./assets/images/my.jpg" alt="個人照片">
-                    </div>
-
-                    <div class="intro__right intro__font" >
-                        <p class="intro__title reveal" >Hellow！</p>
-                        <p class="intro__subtitle reveal">自我介紹</p>
-                        <p class="intro__description reveal">我是呂念庭Eva，不會打Code 程式好難，是個宅宅，可以為了漫畫熬夜三天三夜，學程式無法堅持超過3天 ^u^/</p>
-                        <div class="button__list">
-                            <a href="/resume.html" class="btn_circle btn_resume reveal">Resume</a>
-                            <a href="/projects.html" class="btn_circle btn_project reveal">Project</a>
-                            <a href="/contact.html" class="btn_circle btn_contact reveal">Contact</a>
-                        </div>
-                    </div>
+    <main class="projects container">
+        <h1 class="projects__title reveal">Projects</h1>
+        <div class="project-items reveal">
+            <div class="project__grid">
+                <h4 class="item__title">Editor</h4>
+                <p class="item__description">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. </p>
+            </div>
+            <img class="project-pic" src="./assets/images/rectangle.png" alt="project's picture" >
+        </div>
+        
+        <div class="project-items reveal">
+            <div class="project__grid">
+                <h4 class="item__title">個人簡介網站</h4>
+                <p class="item__description">複習純HTML、CSS、JavaScript，確實理解基礎網頁程式，以利於後續debug。</p>
+                <div class="link__box">
+                    <a class="github_link" href="https://github.com/eva930115/eva930115.github.io" target="_blank" >
+                        <img class="github_icon" src="./assets/images/github.png" alt="github" >
+                        <span class="github_text">專案位置</span>
+                    </a>
                 </div>
-           </div>
-        </section>
+            </div>
+            <img class="project-pic" src="./assets/images/project/my web.png" alt="project's picture" >
+        </div>
+        
+
     </main>
+
+
     <footer class="footer" >
         
         <div class="container footer__grid information">
