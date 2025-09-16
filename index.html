@@ -12,15 +12,17 @@
     <link rel="shortcut icon" href="assets/icons/favicon.png" type="image/x-icon">
     <title>My Web Page</title>
     <link rel="stylesheet" href="css/main.css">   
-    <script src="script.js" defer></script>
+    <script src="/js/main.js" defer></script>
 </head>
 <body>
     <header class="site-header" >
         <div class="container navbar__inner">
-            <div class="brand">
+            <a href="index.html" class="btn__home">
+                <div class="brand">
                 <img class="brand__logo" src="./assets/images/bear.png">
                 <span class="brand__name">Eva</span>
-            </div>
+                </div>
+            </a>
             <div class="nav-links">
                 <a class="nav-link" href="/resume.html" aria-current="page">Resume</a>
                 <img src="./assets/images/line.png" alt="分隔線">
@@ -37,17 +39,17 @@
            <div class="container">
                 <div class="intro__grid">
                     <div class="intro__left" >
-                        <img class="intro__picture" src="./assets/images/my.jpg" alt="個人照片">
+                        <img class="intro__picture reveal" src="./assets/images/my.jpg" alt="個人照片">
                     </div>
 
                     <div class="intro__right intro__font" >
-                        <p class="intro__title" >Hellow！</p>
-                        <p class="intro__subtitle">自我介紹</p>
-                        <p class="intro__description">我是呂念庭Eva，不會打Code 程式好難，是個宅宅，可以為了漫畫熬夜三天三夜，學程式無法堅持超過3天 ^u^/</p>
+                        <p class="intro__title reveal" >Hellow！</p>
+                        <p class="intro__subtitle reveal">自我介紹</p>
+                        <p class="intro__description reveal">我是呂念庭Eva，不會打Code 程式好難，是個宅宅，可以為了漫畫熬夜三天三夜，學程式無法堅持超過3天 ^u^/</p>
                         <div class="button__list">
-                            <a href="/resume.html" class="btn_circle btn_resume">Resume</a>
-                            <a href="/project.html" class="btn_circle btn_project">Project</a>
-                            <a href="/contact.html" class="btn_circle btn_contact">Contact</a>
+                            <a href="/resume.html" class="btn_circle btn_resume reveal">Resume</a>
+                            <a href="/project.html" class="btn_circle btn_project reveal">Project</a>
+                            <a href="/contact.html" class="btn_circle btn_contact reveal">Contact</a>
                         </div>
                     </div>
                 </div>

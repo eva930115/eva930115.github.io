@@ -64,6 +64,7 @@ main {
 .intro__left {
     display: flex;
     text-align: center;
+    overflow: hidden;
     justify-self: end;  /*圖片靠右*/
 }   
 
