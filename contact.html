@@ -11,7 +11,7 @@
     <meta name="description" content="A simple web page example"> <!--這個網頁的描述，google底下的灰字內容-->
     <link rel="shortcut icon" href="assets/icons/favicon.png" type="image/x-icon">
     <title>My Web Page</title>
-    <link rel="stylesheet" href="css/projects.css">     
+    <link rel="stylesheet" href="css/contact.css">     
     <link rel="stylesheet" href="css/layout.css">   
     <link rel="stylesheet" href="css/tokens.css">   
     <link rel="stylesheet" href="css/components.css">   
@@ -36,28 +36,41 @@
         </div>
     </header>
 
-    <main class="projects container">
-        <h1 class="projects__title reveal">Projects</h1>
-        <div class="project-items reveal">
-            <div class="project__grid">
-                <h4 class="item__title">Editor</h4>
-                <p class="item__description">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. </p>
-            </div>
-            <img class="project-pic" src="./assets/images/rectangle.png" alt="project's picture" >
-        </div>
-        
-        <div class="project-items reveal">
-            <div class="project__grid">
-                <h4 class="item__title">個人簡介網站</h4>
-                <p class="item__description">複習純HTML、CSS、JavaScript，確實理解基礎網頁程式，以利於後續debug。</p>
-                <div class="link__box">
-                    <a class="github_link" href="https://github.com/eva930115/eva930115.github.io" target="_blank" >
-                        <img class="github_icon" src="./assets/images/github.png" alt="github" >
-                        <span class="github_text">專案位置</span>
-                    </a>
+    <main class="contact container">
+        <div class="inner__grid">
+            <div class="contact__info reveal">
+                <div class="contact__header">
+                    <h1 class="contact__title">Contact</h1>
+                    <p class="contact__description">Looking forward to hearing from you</p>
+                </div>
+                <div  class="information information-phone"  >
+                    <p class="info_title">Phone</p>
+                    <p class="info__content">12345678</p>
+                </div>
+                <div class="information information-email">
+                    <p class="info_title">Email</p>
+                    <p class="info__content">123@gmail.com</p>
                 </div>
             </div>
-            <img class="project-pic" src="./assets/images/project/my web.png" alt="project's picture" >
+            <form class="contact__form reveal" action="https://formspree.io/f/xblavrzk" method="POST">
+                
+                <div class="form__group">
+                    <label for="name" class="form__label">Name</label>
+                    <input type="text" id="name" name="name" class="form__input" placeholder="請輸入您的姓名" required>
+                </div>
+                
+                <div class="form__group">
+                    <label for="email" class="form__label">Email</label>
+                    <input type="email" id="email" name="_replyto" class="form__input" placeholder="請輸入您的Email" required>
+                </div>
+
+                <div class="form__group">
+                    <label for="message" class="form__label">Message</label>
+                    <textarea id="message" name="message" class="form__textarea" rows="5" required></textarea>
+                </div>
+
+                <button id="submit" type="submit" class="btn btn--primary form__button">Submit</button>
+            </form>
         </div>
         
     </main>

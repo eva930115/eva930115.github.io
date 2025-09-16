@@ -53,6 +53,7 @@
   border-color: var(--color-primary);
   background: color-mix(in  srgb, #000000 0%, transparent);   /* 透明度背景色 數字越小越透 */
   cursor: pointer;  /*滑鼠變手指*/
+  transition: all 0.3s ease;
 }
 
 .btn_resume {
