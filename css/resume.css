@@ -8,13 +8,13 @@
 .inner__grid {  /* resume 內部的grid(左右) 包含兩個section */
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     gap: 0 1rem;
 }
 
 .items__grid { /* 時間+職稱&描述 */
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 2rem 0.5rem;
     
 }
@@ -52,6 +52,7 @@
 }
 
 .item-description {
+    list-style-position: inside;    /* 符號算在內容內 */
     font-size: var(--font-size-xs);
     margin-top: var(--space-1);
     line-height: 1.5;
@@ -59,8 +60,9 @@
 }
 
 .skill__grid {
+    list-style-position: inside;    /* 符號算在內容內 */
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1.5fr;
     gap: 0 1rem;
 }
 

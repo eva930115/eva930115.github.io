@@ -2,7 +2,8 @@
 .intro__picture {
   object-fit: cover;    /*等比縮放 圖片不變形*/
   /* max-width: 30rem; */
-  width: clamp(10rem, 50vw, 30rem);;
+  width: clamp(10rem, 50vw,30rem);
+  /* width: 20rem; */
   aspect-ratio: 1 / 1;  /*1:1比例*/
   border-radius: 50%;
 }
@@ -24,13 +25,12 @@
 }
 
 .intro__description {
-  
+  /* word-wrap:break-all; */
   font-size: clamp(var(--font-size-xs), 0.5vw, 50px);
 }
 
 .btn_circle {
-  width: clamp(6rem, 8vw, 8rem);
-  height: clamp(6rem, 8vw, 8rem);
+  width: 100%;
 
   display: flex;
   justify-content: center;
@@ -46,6 +46,12 @@
   font-weight: bold;
   color: var(--color-text);
   text-decoration: none;  /*移除底線*/
+}
+
+.button__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0rem;
 }
 
 .btn_circle:hover {
