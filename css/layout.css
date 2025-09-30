@@ -83,7 +83,7 @@ main {
     display: grid;
     /* height: 10rem; */
     grid-template-columns: 1fr 1fr 1fr 2fr;
-    grid-template-rows: 2px 5rem;
+    /* grid-template-rows: 2px 5rem; */
     gap: var(--space-3);
     align-items: center;
 }

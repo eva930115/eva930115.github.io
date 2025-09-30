@@ -13,29 +13,24 @@
     <title>My Web Page</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/components.css">
+    
+    <script src="/js/main.js" defer></script>
 </head>
 <body>
     <!-- Header -->
-    <header class="header" >
+    <header class="header">
         <div class="container">
             <div class="header__inner">
                 <a href="index.html" class="header__brand">
                     <img class="header__logo" src="./assets/images/bear.png" alt="Logo">
                     <span class="header__name">Eva</span>
                 </a>
-                
-                
-                <nav class="nav">
-                    <!-- Checkbox for toggling menu -->
-                    <input type="checkbox" id="check">
-                    <!-- Menu icon -->
-                    <label for="check" class="checkbtn">
-                        <i class="fas fa-bars"></i>
-                        <i class="fa-solid fa-xmark"></i>
-                    </label>
 
+                <nav class="nav">
                     <ul class="nav__list">
                         <li class="nav__item"><a class="nav__link" href="/resume.html">Resume</a></li>
                         <li class="nav__item"><a class="nav__link" href="/project.html">Project</a></li>
@@ -48,29 +43,26 @@
 
     <!-- Main -->
     <main>
-        <section class="intro" >
-            <div class="container flex-2col">
-                <div class="intro__left">
-                    <img class="intro__picture reveal animate" src="./assets/images/my.jpg" alt="個人照片">
-                    <!-- <p>23</p> -->
-                </div>
+        <section class="intro">
+            <div class="container">
+                <div class="intro__grid">
+                    <div class="intro__left">
+                        <img class="intro__picture reveal" src="./assets/images/my.jpg" alt="個人照片">
+                    </div>
 
-                <div class="intro__right">
-                    <div class="intro__item">
-                        <h3 class="intro__title reveal animate">Hellow</h3>
-                        <p class="intro__subtitle reveal animate">自我介紹</p>
-                        <p class="intro__description reveal animate">
+                    <div class="intro__right">
+                        <p class="intro__title reveal">Hellow！</p>
+                        <p class="intro__subtitle reveal">自我介紹</p>
+                        <p class="intro__description reveal">
                             我是呂念庭Eva，不會打Code 程式好難，是個宅宅，可以為了漫畫熬夜三天三夜，學程式無法堅持超過3天 ^u^/
                         </p>
-                    </div>
-                    
-                    <div class="intro__buttons">
-                        <a href="/resume.html" class="btn btn--resume reveal animate" ><span>Resume</span></a>
-                        <a href="/project.html" class="btn btn--project reveal animate"><span>Project</span></a>
-                        <a href="/contact.html" class="btn btn--contact reveal animate"><span>Contact</span></a>
+                        <div class="intro__buttons">
+                            <a href="/resume.html" class="btn btn--resume reveal">Resume</a>
+                            <a href="/project.html" class="btn btn--project reveal">Project</a>
+                            <a href="/contact.html" class="btn btn--contact reveal">Contact</a>
+                        </div>
                     </div>
                 </div>
-                
             </div>
         </section>
     </main>
@@ -83,21 +75,19 @@
                 
                 <div class="footer__section footer__section--phone">
                     <p class="footer__title">Phone</p>
-                    <p>0908-165-950</p>
+                    <p>12345678</p>
                 </div>
                 <div class="footer__section footer__section--email">
                     <p class="footer__title">Email</p>
-                    <p>eva93015@gmail.com</p>
+                    <p>123@gmail.com</p>
                 </div>
                 <div class="footer__section footer__section--follow">
                     <p class="footer__title">Follow me</p>
-                    <div>
-                        <a href="https://www.facebook.com/eva930115" target="_blank"><img class="footer--icon" src="assets/images/fb.png"></a>
-                        <a href="https://www.instagram.com/" target="_blank"><img class="footer--icon" src="assets/images/Instagram.png"></a>
-                    </div>
+                    <a href="https://www.facebook.com/">fb</a>
+                    <a href="https://www.instagram.com/">ig</a>
                 </div>
                 <div class="footer__section footer__section--cc">
-                    <p>&copy; 2025 My Web Page</p>
+                    <p>&copy; 2024 My Web Page</p>
                 </div>
             </div>
         </div>

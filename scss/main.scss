@@ -1,0 +1,22 @@
+// 主要 SCSS 入口檔案
+// 匯入所有樣式檔案
+
+// 變數和混入
+@import 'variables';
+@import 'mixins';
+
+// 基礎樣式
+@import 'base';
+
+// 版面佈局
+@import 'layout';
+
+// 元件樣式
+@import 'components';
+
+// 頁面樣式
+@import 'pages/home';
+@import 'pages/resume';
+@import 'pages/projects';
+@import 'pages/contact';
+

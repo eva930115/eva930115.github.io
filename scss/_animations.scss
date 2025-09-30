@@ -1,0 +1,27 @@
+// _animations.scss
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.reveal.animate {
+  animation: fadeInUp 2s ease forwards;
+}
+
+// 自動產生第 1 個到第 10 個的 delay
+@for $i from 1 through 10 {
+  .reveal.animate:nth-child(#{$i}) {
+    animation-delay: #{$i * 0.1}s;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

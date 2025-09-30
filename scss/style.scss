@@ -1,0 +1,11 @@
+// style.scss
+@use 'base';
+@use 'animations';
+@use 'variables';
+@use 'mixin';
+@use 'layout';
+@use 'components';
+@use 'pages/home';
+@use 'pages/resume';
+@use 'pages/projects';
+@use 'pages/contact';

@@ -1,0 +1,57 @@
+@use '../variables';
+@use '../mixin';
+
+
+.intro {
+    width: 100%;
+    margin-inline: auto;  /* 置中 */
+    background-color: variables.$color-background;
+    &__left {
+        @include mixin.flex(row, center, flex-end);
+        overflow: hidden;
+
+        @media (max-width: variables.$bp-tablet) {
+             @include mixin.flex(row,center,center);
+        }
+    }
+
+    &__picture {
+        margin: variables.$space-6;
+        width: clamp(280px,60%,1000px);
+        object-fit: cover; 
+        border-radius: 50%;  /*圓形*/
+        aspect-ratio: 1 / 1;  /*1:1比例*/
+    }   
+    &__right {
+        @include mixin.flex(column,flex-start,center, variables.$space-4);  
+        @media (max-width: variables.$bp-tablet) {
+            @include mixin.flex(column,center,center, variables.$space-4);  
+        }
+    }
+    &__item {
+        @include mixin.flex(column,flex-start,center, variables.$space-4);  
+        width: 70%;
+        
+    }
+    &__title {
+        @include mixin.font(variables.$font-sans, variables.$font-size-xxl, variables.$color-text);
+        margin-bottom: variables.$space-3;
+    }
+    &__subtitle {
+        @include mixin.font(variables.$font-sans, variables.$font-size-m, variables.$color-text, bold);
+    }
+    &__description {
+        @include mixin.font(variables.$font-sans, variables.$font-size-s, variables.$color-text);
+    }
+    &__buttons {
+        margin-bottom: 1rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 150px));;
+        gap: variables.$space-2;
+        @media (max-width: variables.$bp-tablet) {
+            width: 80%;
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@use 'variables';
+@use 'mixin';
+
+html, body {
+    height: 100%;       /* 讓 body 填滿視窗 */
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    align-content: center;
+    flex: 1;            /* 中間內容自動撐開 */
+}
+
+.header {
+    width: 100%;
+    margin-inline: auto;  /* 置中 */
+    background-color: variables.$color-background;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    &__inner {
+        @include mixin.flex(row,center,space-between);
+    }
+}
+
+.container {
+    width: min(calc(100% - 2rem), variables.$container);
+    margin-inline: auto;  /* 置中 */
+    overflow: hidden;
+}
+
+.flex-2col {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    flex: 1 1 50%;
+  }
+
+  @media (max-width: variables.$bp-tablet) {
+    > * {
+      flex: 1 1 100%;
+    }
+  }
+}
+
+.footer {
+    background-color: variables.$color-background;
+    &__grid {
+        margin: 1rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 2fr;
+        gap: variables.$space-6;
+        align-items: center;
+        @media (max-width: variables.$bp-tablet) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width: variables.$bp-mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+    .divider {
+        grid-column: 1 / -1;
+    }
+    &__section {
+        padding-left: variables.$space-6;
+        @include mixin.flex(column,flex-start,center, variables.$space-2);
+        @include mixin.font(variables.$font-sans,variables.$font-size-xs,variables.$color-text);
+    }
+    &__title {
+        @include mixin.font(variables.$font-sans,variables.$font-size-s,variables.$color-text,bold)
+    }
+    &--icon {
+        height: variables.$font-size-m; 
+    }
+    &__section--cc {
+        margin-right: variables.$space-12;
+        align-self: end;
+    }
+}

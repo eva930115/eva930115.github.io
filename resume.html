@@ -11,27 +11,34 @@
     <meta name="description" content="A simple web page example"> <!--這個網頁的描述，google底下的灰字內容-->
     <link rel="shortcut icon" href="assets/icons/favicon.png" type="image/x-icon">
     <title>My Web Page</title>
-    <link rel="stylesheet" href="css/resume.css">     
-    <link rel="stylesheet" href="css/layout.css">   
-    <link rel="stylesheet" href="css/tokens.css">   
-    <link rel="stylesheet" href="css/components.css">   
-    <script src="/js/main.js" defer></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
-    <header class="site-header" >
-        <div class="container navbar__inner">
-            <a href="index.html" class="btn__home">
-                <div class="brand">
-                <img class="brand__logo" src="./assets/images/bear.png">
-                <span class="brand__name">Eva</span>
-                </div>
-            </a>
-            <div class="nav-links">
-                <a class="nav-link" href="/resume.html" aria-current="page">Resume</a>
-                <img src="./assets/images/line.png" alt="分隔線">
-                <a class="nav-link" href="/projects.html">Projects</a>
-                <img src="./assets/images/line.png" alt="分隔線">
-                <a class="nav-link" href="/contact.html">Contact</a>
+    <!-- Header -->
+    <header class="header" >
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="header__brand">
+                    <img class="header__logo" src="./assets/images/bear.png" alt="Logo">
+                    <span class="header__name">Eva</span>
+                </a>                                
+                <nav class="nav">
+                    <!-- Checkbox for toggling menu -->
+                    <input type="checkbox" id="check">
+                    <!-- Menu icon -->
+                    <label for="check" class="checkbtn">
+                        <i class="fas fa-bars"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                    </label>
+
+                    <ul class="nav__list">
+                        <li class="nav__item"><a class="nav__link" href="/resume.html">Resume</a></li>
+                        <li class="nav__item"><a class="nav__link" href="/project.html">Project</a></li>
+                        <li class="nav__item"><a class="nav__link" href="/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
@@ -112,28 +119,31 @@
     </main>
 
 
-    <footer class="footer" >
-        
-        <div class="container footer__grid information">
-            <img class="information-bar" src="./assets/images/line2.png" alt="bar" >
-            
-            <div  class="information-phone"  >
-                <p class="info_title">Phone</p>
-                <p>12345678</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <img class="divider" src="./assets/images/line2.png" alt="bar">              
+                <div class="footer__section footer__section--phone">
+                    <p class="footer__title">Phone</p>
+                    <p>0908-165-950</p>
+                </div>
+                <div class="footer__section footer__section--email">
+                    <p class="footer__title">Email</p>
+                    <p>eva93015@gmail.com</p>
+                </div>
+                <div class="footer__section footer__section--follow">
+                    <p class="footer__title">Follow me</p>
+                    <div>
+                        <a href="https://www.facebook.com/eva930115" target="_blank"><img class="footer--icon" src="assets/images/fb.png"></a>
+                        <a href="https://www.instagram.com/" target="_blank"><img class="footer--icon" src="assets/images/Instagram.png"></a>
+                    </div>
+                </div>
+                <div class="footer__section footer__section--cc">
+                    <p>&copy; 2025 My Web Page</p>
+                </div>
             </div>
-            <div class="information-email">
-                <p class="info_title">Email</p>
-                <p>123@gmail.com</p>
-            </div>
-            <div class="information-follow">
-                <p class="info_title">Follow me</p>
-                <a herf="https://www.facebook.com/">fb</a>
-                <a herf="https://www.instagram.com/">ig</a>
-            </div>
-            <div class="information-cc">
-                <p>&copy; 2024 My Web Page</p>
-            </div>  
-        </div> 
+        </div>
     </footer>
 </body>
 </html>

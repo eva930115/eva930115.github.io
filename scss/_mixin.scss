@@ -1,0 +1,20 @@
+@use 'variables';
+
+// 預設：row, align=center, justify=flex-start, gap=0
+@mixin flex($direction: row, $align: center, $justify: flex-start, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+  line-height: 1; /* 關鍵：避免 j 撐高 */
+}
+
+//  預設 圓體, size-l, color-text, normal
+@mixin font($family: variables.$font-sans, $size: variables.$font-size-l, $color: variables.$color-text, $weight: normal) {
+  font-family: $family;
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+}
+

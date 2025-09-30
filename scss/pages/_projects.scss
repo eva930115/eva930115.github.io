@@ -1,0 +1,110 @@
+// 專案頁專屬樣式
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $space-6;
+}
+
+// 專案標題
+.projects__title {
+  font-family: $font-serif;
+  font-size: $font-size-xl;
+  font-style: bold;
+  color: $color-text;
+  margin-bottom: $space-4;
+  margin-left: 2rem;
+}
+
+// 專案項目容器
+.project-items {
+  @include grid-layout(2, 0);
+  margin: 2rem;
+  align-items: center;
+}
+
+// 專案網格（包含標題和描述）
+.project__grid {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  padding-right: $space-6;
+  font-family: $font-serif;
+  color: $color-text;
+}
+
+// 項目標題
+.item__title {
+  font-size: $font-size-m;
+}
+
+// 項目描述
+.item__description {
+  font-size: $font-size-s;
+  line-height: 1.5;
+}
+
+// 連結容器
+.link__box {
+  width: max-content;
+}
+
+// GitHub 連結
+.github_link {
+  color: $color-text;
+  display: flex;
+  align-items: center;
+  gap: $space-2;
+  padding: $space-1 $space-2;
+  text-decoration: none; // 移除底線
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-radius: 10px;
+    background-color: rgb(177, 177, 177);
+    color: aliceblue;
+
+    // 當父層被 hover 時，子元素也變色
+    .github_icon {
+      filter: brightness(0) invert(1); // 變白色
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+// GitHub 圖示
+.github_icon {
+  width: 25px;
+  aspect-ratio: 1 / 1; // 1:1比例
+  cursor: pointer;
+}
+
+// GitHub 文字
+.github_text {
+  font-size: $font-size-s;
+  cursor: pointer;
+}
+
+// 專案圖片
+.project-pic {
+  margin: 2rem;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid gray;
+}
+
+// 響應式設計
+@include mobile {
+  .project-items {
+    grid-template-columns: 1fr;
+    gap: $space-2;
+  }
+  
+  .project-pic {
+    margin: 0;
+  }
+}
+

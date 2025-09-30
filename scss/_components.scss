@@ -1,0 +1,164 @@
+@use 'variables';
+@use 'mixin';
+
+.header__brand {
+    margin: variables.$space-4;
+    @include mixin.flex(row, center, flex-start, variables.$space-2);
+    text-decoration: none;  /*移除底線*/
+    .header__logo {
+        width: 4rem;
+    }
+    .header__name {
+        @include mixin.font(variables.$font-serif, variables.$font-size-m, variables.$color-text, bold);
+    }
+}
+
+.nav {
+    &__list {
+        margin: variables.$space-4;
+        @include mixin.flex(row, center, center, variables.$space-2);
+        list-style: none; // 移除 ul 預設點點
+    }
+
+    &__item {
+        & + .nav__item {
+            border-left: 1px solid variables.$color-line;
+            padding-left: variables.$space-4;
+            margin-left: variables.$space-4;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        @include mixin.font(
+            variables.$font-sans,
+            variables.$font-size-xs,
+            variables.$color-text
+        );
+
+        &:hover {
+            color: variables.$color-text-muted;
+            transition: all 0.3s ease;
+        }
+    }
+
+    #check {
+        display: none;
+    }
+
+    .checkbtn {
+        z-index: 3000;
+        position: relative;
+        margin-right: variables.$space-2;
+        color: variables.$color-text;
+        cursor: pointer;
+        display: none;
+        width: 2rem;
+        height: 2rem;
+
+        i {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: variables.$font-size-xl;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .fa-bars {
+            opacity: 1;
+            transform: rotate(0deg) scale(1);
+        }
+
+        .fa-xmark {
+            opacity: 0;
+            transform: rotate(90deg) scale(0.5);
+        }
+    }
+}
+
+@media (max-width: variables.$bp-mobile) {
+    .nav {
+        &__link {
+            font-size: variables.$font-size-m;
+        }
+
+        &__list {
+            position: fixed;
+            top: calc(-100% - 1rem); // header 高度
+            left: -2rem;
+            width: calc(100vw + 4rem);
+            height: 100vh;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: variables.$space-12;
+            padding-top: variables.$space-24;
+            padding-right: variables.$space-4;
+            transition: all 0.5s ease;
+        } 
+
+        &__item {
+            & + .nav__item {
+                border: none;
+                margin: 0;
+                padding: 0;
+            }           
+        }
+
+        /* checkbox hack 控制開關 */
+        #check:checked ~ .nav__list {
+            background: variables.$color-background;
+            top: -1rem;
+        }
+
+        #check:checked ~ .checkbtn {
+            .fa-bars {
+                opacity: 0;
+                transform: rotate(-90deg) scale(0.5);
+            }
+            .fa-xmark {
+                opacity: 1;
+                transform: rotate(0deg) scale(1);
+            }
+        }
+
+        .checkbtn {
+            display: block;
+            font-size: variables.$font-size-xl;
+        }
+    }
+}
+
+
+
+.btn {
+    width: clamp(0rem, 100%, 150px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.$color-btn-contact;
+    transition: background-color 0.3s ease; 
+    border: 1px solid variables.$color-line;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;  /*1:1比例*/
+
+    text-decoration: none;
+    @include mixin.font(variables.$font-sans, variables.$font-size-s, variables.$color-text);
+
+    &:hover {
+        background-color: transparent;   /* 變透明 */
+    }
+    &--resume {
+        background-color: variables.$color-btn-resume;
+    }
+    &--project {
+        background-color: variables.$color-btn-project;
+    }
+    &--cokntact {
+        background-color: variables.$color-btn-contact;
+    }
+}
