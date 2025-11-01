@@ -13,6 +13,7 @@
     <title>My Web Page</title>
     <!-- CSS -->
     <link rel="stylesheet" href="style/style.css">
+    <!-- <link rel="stylesheet" href="css/resume.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
@@ -43,87 +44,112 @@
         </div>
     </header>
 
-    <main class="resume container">
+    <main class="resume container-main">
         <h1 class="resume__title" >Resume</h1>
         <!-- Work Experience -->
-        <section class="work-experience inner__grid">
-            <h3 class="section__title reveal">Work <br /> Experience</h3>
-            <div class="items__grid reveal">
-                <p class="section-subtitle" >2025/6 - 2025/8</p>
+        <section id="work-experience" class="section flex-2col reveal animate">
+            <h3 class="section__title ">Work <br /> Experience</h3>
+            <div class="items">
                 <div class="item">
-                    <p class="item-title">德和月 暑期實習生</p>
-                    <ul class="item-description">
-                        <li>參與開發流程，負責前期資料整理與報告撰寫。</li>
-                        <li>協助前端維護與樣板製作，培養團隊合作與問題解決能力。</li>
-                        <li>編寫系統功能手冊，學習進度管理與時間分配。</li>
-                    </ul>
+                    <p class="item__date">
+                        <time datetime="2025-06">2025/6</time> - <time datetime="2025-08">2025/8</time>
+                    </p>
+                    <div class="item__content">
+                        <p class="item__role">德和月 暑期實習生</p>
+                        <dl class="item__desc">
+                            <dt>參與開發流程，負責前期資料整理與報告撰寫。</dt>
+                            <dt>協助前端維護與樣板製作，培養團隊合作與問題解決能力。</dt>
+                            <dt>編寫系統功能手冊，學習進度管理與時間分配。</dt>
+                        </dl>
+                    </div>
                 </div>
-                <p class="section-subtitle" >2023/9 - 2024/6</p>
-                <div class="item">
-                    <p class="item-title">金田餐飲 外場PT</p>
-                    <ul class="item-description">
-                        <li>提供顧客服務，包括點餐、送餐與環境維護。</li>
-                        <li>訓練臨場應變能力與多工處理技巧，提升溝通效率。</li>
-                        <li>熟悉團隊合作流程，維持良好的顧客體驗。</li>
-                    </ul>
+
+                <div class="item ">
+                    <p class="item__date">
+                        <time datetime="2023-09">2023/9</time> - <time datetime="2024-06">2024/6</time>
+                    </p>
+                    <div class="item__content">
+                        <p class="item__role">金田餐飲 外場PT</p>
+                        <dl class="item__desc">
+                            <dt>提供顧客服務，包括點餐、送餐與環境維護。</dt>
+                            <dt>訓練臨場應變能力與多工處理技巧，提升溝通效率。</dt>
+                            <dt>熟悉團隊合作流程，維持良好的顧客體驗。</dt>
+                        </dl>
+                    </div>
                 </div>
-                <p class="section-subtitle" >2022/7 - 2023/3</p>
-                <div class="item">
-                    <p class="item-title">蝦皮店到店 晚班PT</p>
-                    <ul class="item-description">
-                        <li>負責包裹收送、系統掃描與門市營運協助。</li>
-                        <li>學習基本物流流程與資料登錄技巧。</li>
-                        <li>養成細心與責任感，確保作業正確性。</li>
-                    </ul>
+
+                <div class="item ">
+                    <p class="item__date">
+                        <time datetime="2022-07">2022/7</time> - <time datetime="2023-03">2023/3</time>
+                    </p>
+                    <div class="item__content">
+                        <p class="item__role">蝦皮店到店 晚班PT</p>
+                        <dl class="item__desc">
+                            <dt>負責包裹收送、系統掃描與門市營運協助。</dt>
+                            <dt>學習基本物流流程與資料登錄技巧。</dt>
+                            <dt>養成細心與責任感，確保作業正確性。</dt>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </section>
         
-        <img class=" reveal" src="./assets/images/line2.png" alt="bar" >
+        <hr class="section-rule">
+        
 
         <!-- Education -->
-        <section class="education inner__grid">
-            <h3 class="section__title reveal">Education</h3>
-            <div class="items__grid reveal" >
-                <p class="section-subtitle">2022/9 - Presen</p>
-                <div class="item" >
-                    <p class="item-title">國立台北科技大學 | 資訊工程系</p>
-                    <p class="item-description">在學期間主修程式設計、資料庫系統、網頁開發、機械學習與人工智慧等課程，並完成多項專案，例如購物平台、訂房網站、簡易Web App。透過團隊合作與專案實作，培養了系統規劃、問題解決及專案管理的能力。</p>
+        <section id="Education" class="section flex-2col reveal animate">
+            <h3 class="section__title ">Education </h3>
+            <div class="items">
+                <div class="item ">
+                    <p class="item__date">
+                        <time datetime="2022-09">2022/9</time> - <time datetime="2026-06">Presen</time>
+                    </p>
+                    <div class="item__content">
+                        <p class="item__role">國立台北科技大學 | 資訊工程系</p>
+                        <dl class="item__desc">
+                            <dt>在學期間主修程式設計、資料庫系統、網頁開發、機械學習與人工智慧等課程，並完成多項專案，例如購物平台、訂房網站、簡易Web App。透過團隊合作與專案實作，培養了系統規劃、問題解決及專案管理的能力。</dt>
+                        </dl>
+                    </div>
                 </div>
-                <p class="section-subtitle">2019/9 - 2022/6</p>
-                <div class="item" >
-                    <p class="item-title">大安高工 | 控制科</p>
-                    <p class="item-description">學習電子電路、程式控制與自動化相關知識，並透過專題實作累積邏輯思維與動手解決問題的能力。同時建立了工程與資訊領域的基礎，為後續進入大學專業課程奠定良好基礎。</p>
+
+                <div class="item ">
+                    <p class="item__date">
+                        <time datetime="2019-09">2019/9</time> - <time datetime="2022-06">2022/6</time>
+                    </p>
+                    <div class="item__content">
+                        <p class="item__role">大安高工 | 控制科</p>
+                        <dl class="item__desc">
+                            <dt>學習電子電路、程式控制與自動化相關知識，並透過專題實作累積邏輯思維與動手解決問題的能力。同時建立了工程與資訊領域的基礎，為後續進入大學專業課程奠定良好基礎。</dt>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </section>
 
-         <img class=" reveal" src="./assets/images/line2.png" alt="bar" >
+        <hr class="section-rule">
          
         <!-- Skills -->
-        <section class="skills-and-expertise">
-            <div class="skill__grid item">
-                <h3 class="section__title reveal">Skills <br />& Expertise</h3>
-               <div class="skill__description item-description reveal">
-                    <ul>
-                        <li>前端 (Front-End)：HTML5、CSS3、JavaScript、Bootstrap</li>
-                        <li>後端 (Back-End)：Vue.js</li>
-                        <li>資料庫 (Database)：SQL</li>
-                        <li>工具 (Tools)：Git</li>
-                        <li>程式語言 (Programming Languages)：Python、C++</li>
-                    </ul>
-               </div>
+        <section id="Skills" class="section flex-2col reveal animate">
+            <h3 class="section__title">Skills <br />& Expertise </h3>
+            <div class="items">
+                <ul class="item__desc-skills">
+                    <li>前端 (Front-End)：HTML5、CSS3、JavaScript、Bootstrap</li>
+                    <li>後端 (Back-End)：Vue.js</li>
+                    <li>資料庫 (Database)：SQL</li>
+                    <li>工具 (Tools)：Git</li>
+                    <li>程式語言 (Programming Languages)：Python、C++</li>
+                </ul>
             </div>
         </section>
-
     </main>
 
-
+    
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer__grid">
-                <img class="divider" src="./assets/images/line2.png" alt="bar">              
+                <hr class="footer-rule">
                 <div class="footer__section footer__section--phone">
                     <p class="footer__title">Phone</p>
                     <p>0908-165-950</p>

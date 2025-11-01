@@ -32,7 +32,12 @@ main {
 .container {
     width: min(calc(100% - 2rem), variables.$container);
     margin-inline: auto;  /* 置中 */
-    overflow: hidden;
+    // overflow: hidden;
+    &-main {
+        width: min(calc(100% - 2rem), variables.$main);
+        margin-inline: auto;  /* 置中 */
+        // overflow: hidden;
+    }
 }
 
 .flex-2col {
@@ -65,13 +70,18 @@ main {
             grid-template-columns: 1fr;
         }
     }
-    .divider {
+    &-rule {
+        border: 0;
+        border-top: 3px solid variables.$color-line;  // 粗細/顏色改這裡
         grid-column: 1 / -1;
     }
     &__section {
         padding-left: variables.$space-6;
         @include mixin.flex(column,flex-start,center, variables.$space-2);
         @include mixin.font(variables.$font-sans,variables.$font-size-xs,variables.$color-text);
+        @media (max-width: variables.$bp-mobile) {
+            padding-left: variables.$space-2;
+        }
     }
     &__title {
         @include mixin.font(variables.$font-sans,variables.$font-size-s,variables.$color-text,bold)
@@ -82,5 +92,9 @@ main {
     &__section--cc {
         margin-right: variables.$space-12;
         align-self: end;
+        justify-self: end;
+        @media (max-width: variables.$bp-mobile) {
+            justify-self: start;
+        }
     }
 }

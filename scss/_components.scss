@@ -162,3 +162,15 @@
         background-color: variables.$color-btn-contact;
     }
 }
+
+.section-rule {
+    border: 0;
+    height: 1px;
+    background: variables.$color-surface;
+    margin: variables.$space-16 0;
+    /* 讓 hr 滿版： */
+    width: 90dvw;               /* 動態視窗寬，避免 mobile 地址列問題 */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%); /* 從容器置中拉到滿版 */
+}
