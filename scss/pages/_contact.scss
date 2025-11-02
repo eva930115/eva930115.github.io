@@ -1,0 +1,104 @@
+@use '../variables';
+@use '../mixin';
+
+.contact {
+    &__left {
+        @include mixin.flex(column, flex-end, flex-start);
+        padding-right: variables.$space-12;
+        &__grid {
+             @include mixin.flex(column, flex-start, flex-start, variables.$space-4);
+        }
+    }
+    &__item {
+        @include mixin.flex(column, flex-start, flex-start, variables.$space-2);
+        @include mixin.font(variables.$font-sans, variables.$font-size-s, variables.$color-text);
+    }
+    &__title {  //Contact
+        @include mixin.font(variables.$font-sans, variables.$font-size-xl, variables.$color-text, bold);
+    }
+}
+.item__title {  //Phone Email
+    @include mixin.font(variables.$font-sans, variables.$font-size-s, variables.$color-text, bold);
+}
+
+
+
+
+.contact__form {
+    @include mixin.flex(column, flex-start,  flex-start, variables.$space-6);
+    @include mixin.font(variables.$font-sans, variables.$font-size-s, variables.$color-text);
+
+    .form__group {
+        width: 100%;
+        @include mixin.flex(column, flex-start,  flex-start, variables.$space-2);
+    }
+
+    .form__label {
+        font-weight: 500; // 讓 label 更清楚
+    }
+
+    .form__input,
+    .form__textarea {
+        width: 80%;
+        padding: variables.$space-2;
+        border: 1px solid #ccc; // 避免沒有邊界時難判讀
+        border-radius: variables.$radius-s;
+        background-color: transparent;
+
+        &:focus {
+            outline: none;
+            border-color: variables.$color-btn-submit; // ⭐可改你的主色
+        }
+    }
+
+    .form__button {
+        width: 80%;
+        height: 40px;
+        background-color: variables.$color-btn-submit;
+        border-radius: 50px;
+        border: 1px solid variables.$color-line;
+        padding: variables.$space-2;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: color-mix(in srgb, #000 0%, transparent);
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: variables.$bp-tablet) {
+    .contact {
+        text-align: center; // ✅ 讓所有子元素文字置中
+
+        &__left {
+            margin-bottom: variables.$space-8;
+            padding-right: 0; // ✅ 避免右邊過多空白
+            align-items: center; // ✅ 讓區塊本身也置中
+            &__grid {
+                align-items: center;
+            }
+        }
+
+        &__item {
+            align-items: center;
+            text-align: center;
+        }
+
+        &__title {
+            text-align: center;
+        }
+    }
+
+    .contact__form  {
+        align-items: center;
+        .form__group {
+            align-items: center;
+        }
+    }
+}
+
+
+
+
+

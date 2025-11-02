@@ -28,11 +28,43 @@
                 
     }
     &__pic {
-        margin: variables.$space-6;
-        width: 90%;
+        // margin: variables.$space-12;
+        margin: variables.$space-4  variables.$space-12; 
+        width: 80%;
         height: auto;
         border-radius: 10px;
         object-fit: cover;
         border: 1px solid gray;
+    }
+}
+
+.link__box {
+    margin: variables.$space-4 0;
+    width: max-content;
+}
+
+.github_link {
+    @include mixin.flex(row, center, center, variables.$space-2);
+    @include mixin.font(variables.$font-sans, variables.$font-size-s, variables.$color-text);   //for github_text
+    padding: variables.$space-2;
+    text-decoration: none; // 移除底線
+    border-radius: 10px;
+    transition: all 0.3s ease; // ✅ 移到這裡一次設定
+    &:hover {
+        background-color: variables.$color-text;
+        color: variables.$color-background;
+        @include mixin.font(variables.$font-sans, variables.$font-size-s, variables.$color-background);
+        .github_icon {
+            filter: brightness(0) invert(1); // 變白色
+        }
+    }
+    .github_icon {
+        width: 25px;
+        aspect-ratio: 1 / 1;
+        cursor: pointer;
+        transition: all 0.3s ease; // ✅ 統一動畫設定
+    }
+    .github_text {
+        cursor: pointer;
     }
 }
